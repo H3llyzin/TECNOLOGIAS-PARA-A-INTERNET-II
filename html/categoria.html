@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de Categoria - Loja de Games</title>
+
+
+    <link rel="stylesheet" href="../css/style.css">
+   
+</head>
+
+<body>
+
+
+    <nav>
+
+        <div class="logo">
+            🎮 Goku Games
+        </div>
+
+        <div class="links-menu">
+
+            <a href="../index.html">Início</a>
+
+            <a href="../html/cliente.html">Clientes</a>
+
+            <a href="../html/jogo.html">Jogos</a>
+
+            <a href="../html/plataforma.html">Plataformas</a>
+
+            <a href="../html/categoria.html">Categorias</a>
+
+
+        </div>
+
+    </nav>
+
+
+    <div class="container">
+
+        <div class="formulario">
+
+
+            <h1>Cadastro de Categoria</h1>
+
+            
+
+                <form id="formCategoria">
+
+                    <label>Nome:</label>
+                    <input type="text" id="nome" name="nome">
+
+                    <label>Descrição:</label>
+                    <textarea id="descricao" name="descricao"></textarea>
+
+                    <label>Gênero principal:</label>
+                    <input type="text" id="genero" name="genero">
+
+                    <label>Faixa etária recomendada:</label>
+                    <input type="text" id="faixaEtaria" name="faixaEtaria">
+
+                    <label>Status:</label>
+                    <select id="status" name="status">
+
+                        <option value="">Selecione</option>
+                        <option value="Ativa">Ativa</option>
+                        <option value="Inativa">Inativa</option>
+
+                    </select>
+
+                    <button type="submit">
+                        Cadastrar Categoria
+                    </button>
+
+                </form>
+
+            
+
+
+            <div id="resultado"></div>
+
+        </div>
+
+    
+
+    </div>
+
+    <script src="../js/categoria.js"></script>
+
+</body>
+
+</html>
