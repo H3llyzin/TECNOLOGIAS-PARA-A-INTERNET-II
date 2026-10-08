@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Venda</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">🎮 Goku Games</div>
+
+        <div class="links-menu">
+            <a href="../index.html">Início</a>
+            <a href="../html/funcionario.html">Funcionário</a>
+            <a href="../html/venda.html">Venda</a>
+            <a href="../html/item_venda.html">Item da Venda</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <h1>Cadastro de Venda</h1>
+
+        <p class="subtitulo">
+            Registre uma nova venda realizada na loja
+        </p>
+
+        <form id="formVenda">
+
+            <label for="cliente">Cliente</label>
+            <input
+                type="text"
+                id="cliente"
+                name="cliente"
+                maxlength="120"
+                required
+            >
+
+            <label for="funcionario">Funcionário</label>
+            <input
+                type="text"
+                id="funcionario"
+                name="funcionario"
+                maxlength="120"
+                required
+            >
+
+            <label for="data_venda">Data da venda</label>
+            <input
+                type="date"
+                id="data_venda"
+                name="data_venda"
+                required
+            >
+
+            <label for="pagamento">Forma de pagamento</label>
+            <select
+                id="pagamento"
+                name="pagamento"
+                required
+            >
+                <option value="">Selecione</option>
+                <option value="Pix">Pix</option>
+                <option value="Cartão">Cartão</option>
+                <option value="Dinheiro">Dinheiro</option>
+            </select>
+
+            <label for="valor_total">Valor total</label>
+            <input
+                type="number"
+                id="valor_total"
+                name="valor_total"
+                min="0.01"
+                step="0.01"
+                required
+            >
+
+            <label for="status">Status da venda</label>
+            <select
+                id="status"
+                name="status"
+                required
+            >
+                <option value="">Selecione</option>
+                <option value="Aberta">Aberta</option>
+                <option value="Finalizada">Finalizada</option>
+            </select>
+
+            <button type="submit">
+                Registrar venda
+            </button>
+
+            <p id="resultado" class="resultado" role="status"></p>
+
+        </form>
+
+    </main>
+
+    <script src="../js/venda.js"></script>
+
+</body>
+</html>
