@@ -1,11 +1,11 @@
 <?php
 
-$nome = $_POST["nome"] ?? "";
-$descricao = $_POST["descricao"] ?? "";
-$preco = $_POST["preco"] ?? "";
-$dataLancamento = $_POST["dataLancamento"] ?? "";
-$classificacao = $_POST["classificacao"] ?? "";
-$desenvolvedora = $_POST["desenvolvedora"] ?? "";
+$nome = trim($_POST["nome"] ?? "");
+$descricao = trim($_POST["descricao"] ?? "");
+$preco = trim($_POST["preco"] ?? "");
+$dataLancamento = trim($_POST["dataLancamento"] ?? "");
+$classificacao = trim($_POST["classificacao"] ?? "");
+$desenvolvedora = trim($_POST["desenvolvedora"] ?? "");
 
 
 // =========================
@@ -104,29 +104,30 @@ if (!in_array($classificacao, $classificacoesValidas)) {
 // =========================
 // RESULTADO
 // =========================
+// =========================
+// RESULTADO
+// =========================
 
-echo "Jogo cadastrado com sucesso!<br>";
-
-echo "Jogo: " . $nome . "<br>";
+echo "Jogo cadastrado com sucesso!\n";
+echo "Jogo: " . $nome . "\n";
 
 echo "Preço: R$ "
     . number_format($preco, 2, ",", ".")
-    . "<br>";
+    . "\n";
 
 echo "Data de lançamento: "
     . $data->format("d/m/Y")
-    . "<br>";
+    . "\n";
 
 echo "Classificação: "
     . $classificacao
-    . "<br>";
-
+    . "\n";
 
 // =========================
 // PEQUENA LÓGICA
 // =========================
 
-if ($preco >= 200) {
+if ($preco >= 190) {
 
     echo "Categoria de preço: jogo premium.";
 

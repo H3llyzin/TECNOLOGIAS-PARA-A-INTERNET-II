@@ -1,10 +1,10 @@
 <?php
 
-$nome = $_POST["nome"] ?? "";
-$descricao = $_POST["descricao"] ?? "";
-$genero = $_POST["genero"] ?? "";
-$faixaEtaria = $_POST["faixaEtaria"] ?? "";
-$status = $_POST["status"] ?? "";
+$nome = trim($_POST["nome"] ?? "");
+$descricao = trim($_POST["descricao"] ?? "");
+$genero = trim($_POST["genero"] ?? "");
+$faixaEtaria = trim($_POST["faixaEtaria"] ?? "");
+$status = trim($_POST["status"] ?? "");
 
 
 // =========================
@@ -58,18 +58,15 @@ if ($status != "Ativa" && $status != "Inativa") {
     exit;
 }
 
-
 // =========================
 // RESULTADO
 // =========================
 
-echo "Categoria cadastrada com sucesso!<br>";
-
-echo "Categoria: " . $nome . "<br>";
-echo "Gênero: " . $genero . "<br>";
-echo "Faixa etária: " . $faixaEtaria . "<br>";
-echo "Status: " . $status . "<br>";
-
+echo "Categoria cadastrada com sucesso!\n";
+echo "Categoria: " . $nome . "\n";
+echo "Gênero: " . $genero . "\n";
+echo "Faixa etária: " . $faixaEtaria . "\n";
+echo "Status: " . $status . "\n";
 
 // =========================
 // PEQUENA LÓGICA
